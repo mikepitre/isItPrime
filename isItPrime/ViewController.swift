@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBAction func submitButton(sender: AnyObject) {
         
-        let number = Int(numberBox.text!)
+        if let number = Int(numberBox.text!) {
         
         var isPrime = true
         
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             
             for var i = 2; i < number; i++ {
                 
-                if number! % i == 0 {
+                if number % i == 0 {
                     
                     isPrime = false
                     
@@ -39,11 +39,12 @@ class ViewController: UIViewController {
         }
         
         if isPrime == true {
-            result.text = "\(number!) is a prime number."
+            result.text = "\(number) is a prime number."
         } else {
-            result.text = "\(number!) is not a prime number."
+            result.text = "\(number) is not a prime number."
         }
         
+        }
     }
     
     
