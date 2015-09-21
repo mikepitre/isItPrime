@@ -17,33 +17,37 @@ class ViewController: UIViewController {
         
         if let number = Int(numberBox.text!) {
         
-        var isPrime = true
+            var isPrime = true
         
         
-        if number == 1 {
+            if number == 1 {
             
-            isPrime = false
+                isPrime = false
             
-        }
+            }
         
-        if number != 1 && number != 2 {
+            if number != 1 && number != 2 {
             
-            for var i = 2; i < number; i++ {
+                for var i = 2; i < number; i++ {
                 
-                if number % i == 0 {
+                    if number % i == 0 {
                     
-                    isPrime = false
+                        isPrime = false
                     
+                    }
                 }
             }
+        
+            if isPrime == true {
+                result.text = "\(number) is a prime number."
+            } else {
+                result.text = "\(number) is not a prime number."
+            }
+        
         }
         
-        if isPrime == true {
-            result.text = "\(number) is a prime number."
-        } else {
-            result.text = "\(number) is not a prime number."
-        }
-        
+        else {
+            result.text = "Please enter a number."
         }
     }
     
