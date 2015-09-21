@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         }
         
         else {
-            result.text = "Please enter a number."
+            result.text = "Please enter a whole number."
         }
     }
     
